@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade - Arena-X Admin</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: #1f2937;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 24px 16px;
+    }
+    main {
+      max-width: 840px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 36px 32px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #111827;
+      margin-top: 0;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: #111827;
+      margin-top: 28px;
+    }
+    p, li {
+      font-size: 1rem;
+      color: #374151;
+    }
+    ul {
+      padding-left: 22px;
+    }
+    .meta {
+      font-size: 0.92rem;
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+    .box {
+      background: #f3f4f6;
+      border-left: 4px solid #0284c7;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Política de Privacidade — Arena-X Admin (Quadra Admin)</h1>
+    <p class="meta"><strong>Última atualização:</strong> 10 de novembro de 2026 &nbsp;|&nbsp; <strong>Aplicativo:</strong> Arena-X Admin (<code>com.b7.quadra.admin</code>) &nbsp;|&nbsp; <strong>Desenvolvedor:</strong> B7 Inovação / Arena-X</p>
+
+    <p>Esta Política de Privacidade descreve de forma direta e transparente como o aplicativo <strong>Arena-X Admin</strong> (também identificado como <strong>Quadra Admin</strong>, pacote <code>com.b7.quadra.admin</code>) coleta, utiliza, armazena, compartilha e protege as informações pessoais e operacionais dos usuários gestores e proprietários de centros esportivos e quadras, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018) e com as Políticas de Dados do Usuário do Google Play e da Apple App Store.</p>
+
+    <h2>1. Dados Coletados</h2>
+    <p>Para o funcionamento do gerenciamento de centros esportivos, quadras, horários e reservas, o aplicativo coleta apenas os dados estritamente necessários fornecidos pelo próprio usuário ou gerados no uso do serviço:</p>
+    <ul>
+      <li><strong>Dados de Cadastro e Identificação:</strong> Nome completo, endereço de e-mail, número de telefone/WhatsApp, CPF ou CNPJ do responsável ou estabelecimento e credenciais de autenticação (incluindo login social via Google ou Apple).</li>
+      <li><strong>Dados do Centro Esportivo e Quadras:</strong> Nome do estabelecimento, endereço físico, coordenadas geográficas (latitude e longitude para exibição do endereço da quadra no mapa), horários de funcionamento, modalidades esportivas, comodidades e valores de locação.</li>
+      <li><strong>Imagens e Mídia (Câmera e Galeria de Fotos):</strong> Fotos de perfil, logotipo do centro esportivo e fotografias das quadras enviadas voluntariamente pelo administrador do espaço.</li>
+      <li><strong>Dados Técnicos e de Notificação:</strong> Token de notificação push (Firebase Cloud Messaging — FCM) para envio de alertas sobre novas reservas, cancelamentos e avisos operacionais, além de registros básicos de diagnóstico de falhas.</li>
+    </ul>
+
+    <h2>2. Permissões do Dispositivo e Finalidade de Uso</h2>
+    <ul>
+      <li><strong>Câmera (<code>CAMERA</code>):</strong> Utilizada exclusivamente quando o usuário opta por capturar fotos das quadras, do centro esportivo ou do perfil diretamente pelo aplicativo.</li>
+      <li><strong>Galeria de Fotos / Armazenamento de Mídia (<code>READ_MEDIA_IMAGES</code> / <code>READ_EXTERNAL_STORAGE</code> / <code>NSPhotoLibraryUsageDescription</code>):</strong> Utilizada exclusivamente para permitir que o administrador selecione imagens existentes no dispositivo para ilustrar o cadastro das quadras e do centro esportivo.</li>
+      <li><strong>Localização (<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>):</strong> Utilizada para facilitar o preenchimento e a marcação exata do endereço do centro esportivo no mapa para que os atletas encontrem o local. O aplicativo não realiza rastreamento de localização em segundo plano.</li>
+      <li><strong>Notificações Push (<code>POST_NOTIFICATIONS</code>):</strong> Utilizadas para informar o gestor em tempo real sobre agendamentos, confirmações e cancelamentos de horários nas quadras.</li>
+    </ul>
+
+    <h2>3. Como Utilizamos os Dados</h2>
+    <p>As informações coletadas são utilizadas exclusivamente para:</p>
+    <ul>
+      <li>Autenticar o administrador e manter a segurança de sua conta no Arena-X Admin;</li>
+      <li>Exibir as informações públicas da quadra (nome, fotos, endereço, horários disponíveis e preços) para os usuários que buscam realizar reservas no ecossistema Arena-X;</li>
+      <li>Processar e gerenciar agendamentos, assinaturas e histórico de reservas;</li>
+      <li>Enviar comunicações transacionais e suporte técnico ao gestor.</li>
+    </ul>
+
+    <h2>4. Compartilhamento de Dados com Terceiros</h2>
+    <p>O <strong>Arena-X Admin</strong> <strong>não vende, aluga ou comercializa</strong> dados pessoais de seus usuários. Os dados são processados apenas por provedores de infraestrutura essenciais para a operação do aplicativo, sob rigorosos padrões de segurança e criptografia em trânsito (HTTPS/TLS):</p>
+    <ul>
+      <li><strong>Google Firebase (Authentication e Cloud Messaging):</strong> Para autenticação segura e entrega de notificações push;</li>
+      <li><strong>Apple Identity Services (Sign in with Apple):</strong> Para autenticação segura em dispositivos iOS;</li>
+      <li><strong>Serviços de Hospedagem em Nuvem da API Arena-X:</strong> Para armazenamento seguro do banco de dados de quadras e reservas.</li>
+    </ul>
+
+    <h2>5. Armazenamento, Segurança e Retenção de Dados</h2>
+    <p>Todos os dados trafegam de forma criptografada (HTTPS/TLS) entre o aplicativo e nossos servidores. Mantemos os dados enquanto a conta do administrador estiver ativa ou pelo período necessário para cumprimento de obrigações legais, fiscais ou regulatórias.</p>
+
+    <h2>6. Direitos do Titular e Exclusão de Conta e Dados</h2>
+    <div class="box">
+      <p><strong>Como excluir sua conta e seus dados:</strong></p>
+      <ul>
+        <li><strong>Diretamente pelo Aplicativo:</strong> Acesse a aba <strong>Perfil</strong> no menu do aplicativo Arena-X Admin e toque na opção de <strong>Cancelar / Excluir Conta</strong>. A exclusão encerra imediatamente a sessão e remove os dados pessoais vinculados à conta.</li>
+        <li><strong>Solicitação por E-mail (Sem precisar abrir o app):</strong> Caso prefira solicitar a exclusão total de sua conta e de todos os dados associados fora do aplicativo, envie um e-mail para <a href="mailto:cassianoasm@gmail.com">cassianoasm@gmail.com</a> informando o e-mail cadastrado com o assunto <em>"Exclusão de Conta - Arena-X Admin"</em>. Sua solicitação será atendida em até 5 dias úteis.</li>
+      </ul>
+    </div>
+
+    <h2>7. Privacidade de Crianças e Adolescentes</h2>
+    <p>O aplicativo Arena-X Admin é destinado exclusivamente a gestores, proprietários e administradores de espaços esportivos maiores de 18 anos. Não coletamos intencionalmente dados de crianças ou menores de idade.</p>
+
+    <h2>8. Alterações nesta Política de Privacidade</h2>
+    <p>Esta Política de Privacidade pode ser atualizada periodicamente para refletir melhorias no aplicativo ou exigências legais. A data da última revisão estará sempre indicada no topo desta página.</p>
+
+    <h2>9. Contato e Encarregado de Dados (DPO)</h2>
+    <p>Em caso de dúvidas, solicitações sobre seus dados pessoais ou questões relacionadas a esta Política de Privacidade, entre em contato conosco:</p>
+    <ul>
+      <li><strong>Responsável / Desenvolvedor:</strong> B7 Inovação — Arena-X</li>
+      <li><strong>E-mail de Suporte e Privacidade:</strong> <a href="mailto:cassianoasm@gmail.com">cassianoasm@gmail.com</a></li>
+    </ul>
+  </main>
+</body>
+</html>
