@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arena-X Admin (com.b7.quadra.admin) - App Review Walkthrough & Demo</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0b0f19;
+      color: #f9fafb;
+      margin: 0;
+      padding: 24px 16px;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 32px;
+    }
+    h1, h2 { color: #00e5ff; margin-top: 0; }
+    h2 { margin-top: 28px; font-size: 1.25rem; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }
+    .player-box {
+      background: #000;
+      border: 2px solid #00e5ff;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    canvas {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      border: 2px solid #374151;
+    }
+    .controls {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    button {
+      background: #00e5ff;
+      color: #000;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .card {
+      background: #1f2937;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
+    code {
+      background: #374151;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Arena-X Admin — App Review Demonstration (iOS 1.0)</h1>
+    <p><strong>Bundle ID:</strong> <code>com.b7.quadra.admin</code> &nbsp;|&nbsp; <strong>Version:</strong> 1.0 (Build 101)</p>
+
+    <div class="player-box">
+      <p id="stepLabel" style="font-weight:bold; color:#00e5ff; margin-top:0;">Step 1/5: App Launch & Login (Email/Password or Sign in with Apple)</p>
+      <canvas id="demoCanvas" width="540" height="1100"></canvas>
+      <div class="controls">
+        <button onclick="setStep(0)">1. Launch & Login</button>
+        <button onclick="setStep(1)">2. Sports Center Setup</button>
+        <button onclick="setStep(2)">3. Dashboard & Bookings</button>
+        <button onclick="setStep(3)">4. Courts Management</button>
+        <button onclick="setStep(4)">5. Profile & Account Deletion</button>
+      </div>
+    </div>
+
+    <h2>1. Demo Account Credentials (Pre-Configured with Sports Center & Courts)</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Email:</strong> <code>apple.review@apparenax.online</code></li>
+        <li><strong>Password:</strong> <code>ArenaX2026!</code></li>
+        <li><strong>Pre-loaded Data:</strong> This account already has an active Sports Center (<em>Arena-X Centro Esportivo Demo</em>, ID #2) and 2 registered courts (<em>Quadra 01 - Beach Tennis Oficial</em> and <em>Quadra 02 - Futebol Society</em>), so logging in opens the main 4-tab Admin Dashboard immediately.</li>
+        <li><strong>Sample Data for New Account Registration:</strong> If testing new Sport Center creation, use valid Brazilian sample CNPJ <code>11.222.333/0001-81</code>, Phone <code>(34) 99191-0465</code>, and Postal Code (CEP) <code>38400-100</code>.</li>
+      </ul>
+    </div>
+
+    <h2>2. Purpose & Target Audience</h2>
+    <div class="card">
+      <p><strong>Arena-X Admin</strong> is the venue management companion app for sports center owners, managers, and court administrators. It solves the problem of manual scheduling conflicts by allowing venue operators to register their sports center, configure court availability and hourly pricing, monitor real-time bookings made by athletes, and receive instant push notifications.</p>
+    </div>
+
+    <h2>3. Account Deletion Flow (Guideline 5.1.1(v))</h2>
+    <div class="card">
+      <p>After logging in, tap the <strong>Perfil (Profile)</strong> tab (4th icon on the bottom navigation bar), scroll down, and tap <strong>"Cancelar assinatura / Excluir conta"</strong> and confirm in the dialog. The account is deactivated immediately and the user is signed out to the initial screen.</p>
+    </div>
+  </main>
+
+  <script>
+    const canvas = document.getElementById('demoCanvas');
+    const ctx = canvas.getContext('2d');
+    let currentStep = 0;
+    const steps = [
+      {
+        label: "Step 1/5: App Launch, Sign In & Sign in with Apple",
+        title: "ARENA-X ADMIN",
+        subtitle: "Bem-vindo, administrador!",
+        items: [
+          "Email: apple.review@apparenax.online",
+          "Senha: ••••••••••••",
+          "[ Entrar (Sign In) ]",
+          "[  Continuar com a Apple ]",
+          "Não tem uma conta? Cadastre-se"
+        ]
+      },
+      {
+        label: "Step 2/5: Sports Center Configuration (Venue Details & Hours)",
+        title: "Centro Esportivo",
+        subtitle: "Arena-X Centro Esportivo Demo",
+        items: [
+          "CNPJ: 11.222.333/0001-81",
+          "Telefone: (34) 99191-0465",
+          "Endereço: Av. João Naves de Ávila, 1500 - MG",
+          "Comodidades: Estacionamento, Vestiário, Iluminação",
+          "Horário: Seg a Dom • 07:00 às 23:00"
+        ]
+      },
+      {
+        label: "Step 3/5: Main Dashboard & Real-Time Bookings (Tab 1 & Tab 2)",
+        title: "Início & Agenda • Reservas",
+        subtitle: "Painel de Controle da Arena",
+        items: [
+          "Quadra 01 • Beach Tennis (18:00 - 19:00) [CONFIRMADA]",
+          "Quadra 02 • Futebol Society (19:00 - 20:00) [CONFIRMADA]",
+          "Ocupação Semanal: 84% • Receita: R$ 5.460,00",
+          "Barra Inferior: [Início] [Agenda] [Quadras] [Perfil]"
+        ]
+      },
+      {
+        label: "Step 4/5: Courts Management & Pricing (Tab 3: Quadras)",
+        title: "Minhas Quadras",
+        subtitle: "Gerenciamento de Quadras e Preços",
+        items: [
+          "1. Quadra 01 - Beach Tennis Oficial • R$ 90,00/h",
+          "2. Quadra 02 - Futebol Society • R$ 160,00/h",
+          "[ + Cadastrar Nova Quadra ]",
+          "Upload de fotos via Câmera ou Galeria"
+        ]
+      },
+      {
+        label: "Step 5/5: Profile & Account Deletion Flow (Tab 4: Perfil)",
+        title: "Perfil do Administrador",
+        subtitle: "apple.review@apparenax.online",
+        items: [
+          "Editar Dados do Usuário e Centro Esportivo",
+          "Configurações de Notificações Push",
+          "[ Cancelar Assinatura / Excluir Conta ]",
+          "-> Confirmação imediata + Logout automático"
+        ]
+      }
+    ];
+
+    function render() {
+      const s = steps[currentStep];
+      document.getElementById('stepLabel').innerText = s.label;
+      ctx.fillStyle = '#0d1522';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#00e5ff';
+      ctx.font = 'bold 28px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(s.title, canvas.width / 2, 90);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '20px sans-serif';
+      ctx.fillText(s.subtitle, canvas.width / 2, 135);
+
+      let y = 200;
+      s.items.forEach((item, idx) => {
+        ctx.fillStyle = idx === 2 && currentStep === 4 ? '#7f1d1d' : '#1e293b';
+        ctx.strokeStyle = '#00e5ff';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(36, y, canvas.width - 72, 115, 16);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#f8fafc';
+        ctx.font = 'bold 18px sans-serif';
+        ctx.fillText(item, canvas.width / 2, y + 64);
+        y += 145;
+      });
+
+      // Bottom nav bar
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, canvas.height - 90, canvas.width, 90);
+      const tabs = ['INÍCIO', 'AGENDA', 'QUADRAS', 'PERFIL'];
+      tabs.forEach((t, i) => {
+        ctx.fillStyle = (currentStep - 1 === i) ? '#00e5ff' : '#64748b';
+        ctx.font = 'bold 14px sans-serif';
+        ctx.fillText(t, (canvas.width / 4) * i + (canvas.width / 8), canvas.height - 38);
+      });
+    }
+
+    function setStep(idx) {
+      currentStep = idx;
+      render();
+    }
+
+    setInterval(() => {
+      currentStep = (currentStep + 1) % steps.length;
+      render();
+    }, 3500);
+    render();
+  </script>
+</body>
+</html>
